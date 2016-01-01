@@ -244,111 +244,115 @@ Our channels
 @teleseedch [English]
 ]],
     help_text = [[
-Commands list :
+Infernals Help TxT : 😈
+Plugins : 🔻
 
-!kick [username|id]
-You can also do it by reply
+1. banhammer ⭕️
+Help For Banhammer👇
 
-!ban [ username|id]
-You can also do it by reply
+!Kick @UserName 😜
 
-!unban [id]
-You can also do it by reply
+And You Can do It by Replay 🙈
+!Ban @UserName 〽️
+You Can Do It By Replay👌
 
-!who
-Members list
+!Unban @UserName
+You Can Do it By Replay😱
 
-!modlist
-Moderators list
+For Admins : 👇
+!banall @UserName or (user_id)😺
+you Can do it By Replay 👤
 
-!promote [username]
-Promote someone
+!unbanall 🆔User_Id🆔
+〰〰〰〰〰〰〰〰〰〰
+2. GroupManager :🔹
 
-!demote [username]
-Demote someone
+!Creategroup "GroupName" 🙈
+You Can CreateGroup With this command😱
 
-!kickme
-Will kick user
+!lock member 😋
+You Can lock Your Group Members 🔻
 
-!about
-Group description
+!lock bots 🔹
+No bots can come in Your gp 🕶
 
-!setphoto
-Set and locks group photo
+!lock name ❤️
+no one can change your gpname💍
 
-!setname [name]
-Set group name
+!setflood😃
+Set the group flood control🈹
 
-!rules
-Group rules
+!settings ❌
+Watch group settings
 
-!id
-return group id or user id
+!owner🚫
+watch group owner
 
-!help
+!setowner user_id❗️
+You can set someone to the group owner‼️
 
-!lock [member|name|bots]
-Locks [member|name|bots] 
+!modlist💯
+watch Group mods🔆
 
-!unlock [member|name|photo|bots]
-Unlocks [member|name|photo|bots]
+!lock flood⚠️
+lock group flood🔰
 
-!set rules <text>
-Set <text> as rules
+!unlock (bots-member-flood-photo-name-Arabic)✅
+Unlock Something🚼
 
-!set about <text>
-Set <text> as about
+!rules 🆙 or !set rules🆗
+watch group rules or set
+!about or !set about 🔴
+!res @username🔘
+See UserInfo©
 
-!settings
-Returns group settings
+!who♦️
+Get Ids Chat🔺
 
-!newlink
-create/revoke your group link
+!log 🎴
+get members id ♠️
 
-!link
-returns group link
+!all🔴
+this is like stats in a file🔸
+〰〰〰〰〰〰〰〰
+Admins :®
+!add 😎
+You Can add the group to moderation.json😱
 
-!owner
-returns group owner id
+!rem😏
+You Can Remove the group from mod.json⭕️
 
-!setowner [id]
-Will set id as owner
+!setgpowner (Gpid) user_id ⚫️
+from realm®®
 
-!setflood [value]
-Set [value] as flood sensitivity
+!addadmin 🔶
+set some one to global admin🔸
 
-!stats
-Simple message statistics
+!removeadmin🔘
+remove somone from global admin🔹
+〰〰〰〰〰〰〰〰〰〰〰
+3. Stats :©
+!stats infernal (sudoers)✔️
+shows bt stats🔚
 
-!save [value] <text>
-Save <text> as [value]
+!infernalteam☑️
+shows about our team🎶
 
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
-
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
-
+!stats🔘
+shows group stats💲
+〰〰〰〰〰〰〰〰
+4. Feedback⚫️
+!feedback txt🔻◼️
+send maseage to admins via bot🔈
+〰〰〰〰〰〰〰〰〰〰〰
+5. Tagall◻️
+!tagall txt🔸
+will tag users©
+〰〰〰〰〰〰〰〰〰
+more plugins soon™
+Our team✔️iNFERNAL➰
+our channel : @INFERNALCHANNEL & @INFERNALTEAM🔋
+You Can user both "!" & "/" for them🎧
 ]]
 
   }
