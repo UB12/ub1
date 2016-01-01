@@ -222,7 +222,7 @@ function create_config( )
     },
     sudo_users = {109722284},--Sudo users
     disabled_channels = {},
-    realm = {},--Realms Id
+    realm = {84362162},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[infernal bot v1.3
  sudouser : @Arashinfernal
