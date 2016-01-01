@@ -216,7 +216,7 @@ function create_config( )
     "set",
     "get",
     "broadcast",
-    "download_media",
+    "plugins",
     "invite",
     "all"
     },
