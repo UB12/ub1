@@ -224,24 +224,27 @@ function create_config( )
     disabled_channels = {},
     realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v1
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
+    about_text = [[infernal bot v1.3
+ sudouser : @Arashinfernal
+ The inter Security TEAM😱
+INFERNAL™
+〰〰〰〰〰〰〰〰〰〰〰〰
+Leader : @ArashINFERNAL
+moderator : @Shahabsaf 
+moderator : @creed_is_dead 
+moderator : @Mustafaflux 
+moderator : @Parham_mrbot 
+〰〰〰〰〰〰〰〰〰〰〰〰
+Member : @NXT_Sudo 
+Member : @Arash_admin_dragon 
+Member : @lord_hpr 
+Member : @ali_ghoghnoos
+Member : @Minaco
+Member : @botmaster
 
 Our channels
-@teleseedch [English]
+@INFERNALTEAM [persian]
+@INFERNALCHANNE: [persian]
 ]],
     help_text = [[
 Infernals Help TxT : 😈
