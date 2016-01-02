@@ -222,7 +222,7 @@ function create_config( )
     },
     sudo_users = {109722284},--Sudo users
     disabled_channels = {},
-    realm = {84362162},--Realms Id
+    realm = {84362162,74008375},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[infernal bot v1.3
  sudouser : @Arashinfernal
@@ -317,6 +317,8 @@ get members id ♠️
 
 !all🔴
 this is like stats in a file🔸
+added !clink *
+and !glink :)
 〰〰〰〰〰〰〰〰
 Admins :®
 !add 😎
