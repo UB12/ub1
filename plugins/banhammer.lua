@@ -107,10 +107,10 @@ local function username_id(cb_extra, success, result)
         local hash =  'banned:'..chat_id
         redis:srem(hash, member_id)
         return 'User '..user_id..' unbanned'
-      elseif get_cmd == 'banall' then
+      elseif get_cmd == 'banallgp' then
         send_large_msg(receiver, 'User @'..member..' ['..member_id..'] globally banned')
         return banall_user(member_id, chat_id)
-      elseif get_cmd == 'unbanall' then
+      elseif get_cmd == 'unbanallgp' then
         send_large_msg(receiver, 'User @'..member..' ['..member_id..'] unbanned')
         return unbanall_user(member_id, chat_id)
       end
@@ -249,7 +249,7 @@ local function run(msg, matches)
     return
   end
 
-  if matches[1]:lower() == 'banall' then -- Global ban
+  if matches[1]:lower() == 'banallgp' then -- Global ban
     if type(msg.reply_id) ~="nil" and is_admin(msg) then
       return get_message(msg.reply_id,banall_by_reply, false)
     end
@@ -265,12 +265,12 @@ local function run(msg, matches)
         return 'User ['..user_id..' ] globally banned'
       else
         local member = string.gsub(matches[2], '@', '')
-        local get_cmd = 'banall'
+        local get_cmd = 'banallgp'
         chat_info(receiver, username_id, {get_cmd=get_cmd, receiver=receiver, chat_id=msg.to.id, member=member})
       end
     end
   end
-  if matches[1]:lower() == 'unbanall' then -- Global unban
+  if matches[1]:lower() == 'unbanallgp' then -- Global unban
     local user_id = matches[2]
     local chat_id = msg.to.id
     if msg.to.type == 'chat' then
@@ -279,7 +279,7 @@ local function run(msg, matches)
           return false 
         end
         unbanall_user(user_id)
-        return 'User ['..user_id..' ] removed from global ban list'
+        return 'User ['..user_id..' ] Globally unabanned'
       else
         local member = string.gsub(matches[2], '@', '')
         local get_cmd = 'unbanall'
@@ -294,16 +294,16 @@ end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
+    "^[!/]([Bb]anallgp) (.*)$",
+    "^[!/]([Bb]anallgp)$",
     "^[!/]([Bb]anlist) (.*)$",
     "^[!/]([Bb]anlist)$",
     "^[!/]([Gg]banlist)$",
     "^[!/]([Bb]an) (.*)$",
     "^[!/]([Kk]ick)$",
     "^[!/]([Uu]nban) (.*)$",
-    "^[!/]([Uu]nbanall) (.*)$",
-    "^[!/]([Uu]nbanall)$",
+    "^[!/]([Uu]nbanallgp) (.*)$",
+    "^[!/]([Uu]nbanallgp)$",
     "^[!/]([Kk]ick) (.*)$",
     "^[!/]([Kk]ickme)$",
     "^[!/]([Bb]an)$",
