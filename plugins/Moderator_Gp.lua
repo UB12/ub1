@@ -27,7 +27,7 @@ local function check_member(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-      return send_large_msg(receiver, 'You have been promoted as the owner.')
+      return send_large_msg(receiver, 'You have been promoted as the owner✅.')
     end
   end
 end
@@ -59,7 +59,7 @@ local function check_member_modadd(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-      return send_large_msg(receiver, 'Group is added and you have been promoted as the owner ')
+      return send_large_msg(receiver, 'Group is added and you have been promoted as the owner☑️ ')
     end
   end
 end
@@ -88,7 +88,7 @@ local function check_member_modrem(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-      return send_large_msg(receiver, 'Group has been removed')
+      return send_large_msg(receiver, 'Group has been removed❌')
     end
   end
 end
@@ -127,7 +127,7 @@ end
 local function get_description(msg, data)
   local data_cat = 'description'
   if not data[tostring(msg.to.id)][data_cat] then
-    return 'No description available.'
+    return 'No description available❌.'
   end
   local about = data[tostring(msg.to.id)][data_cat]
   local about = string.gsub(msg.to.print_name, "_", " ")..':\n\n'..about
@@ -139,11 +139,11 @@ local function lock_group_arabic(msg, data, target)
   end
   local group_arabic_lock = data[tostring(target)]['settings']['lock_arabic']
   if group_arabic_lock == 'yes' then
-    return 'Arabic is already locked'
+    return 'Arabic is already locked☑️'
   else
     data[tostring(target)]['settings']['lock_arabic'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'Arabic has been locked'
+    return 'Arabic has been locked☑️'
   end
 end
 
@@ -157,7 +157,7 @@ local function unlock_group_arabic(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_arabic'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'Arabic has been unlocked'
+    return 'Arabic has been unlocked❌'
   end
 end
 
@@ -312,11 +312,11 @@ end
 local function modrem(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "You're not admin"
+    return "You're not admin Besik"
   end
   local data = load_data(_config.moderation.data)
   if not data[tostring(msg.to.id)] then
-    return 'Group is not added.'
+    return 'Group is not added sicktir.'
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_modrem,{receiver=receiver, data=data, msg = msg})
@@ -454,11 +454,11 @@ local function run(msg, matches)
       load_photo(msg.id, set_group_photo, msg)
     end
   end
-  if matches[1] == 'add' then
+  if matches[1] == 'addgp' then
     print("group "..msg.to.print_name.."("..msg.to.id..") added")
     return modadd(msg)
   end
-   if matches[1] == 'rem' then
+   if matches[1] == 'remgp' then
     print("group "..msg.to.print_name.."("..msg.to.id..") removed")
     return modrem(msg)
   end
@@ -712,7 +712,7 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group settings ")
       return show_group_settingsmod(msg, data, target)
     end
-    if matches[1] == 'newlink' then
+    if matches[1] == 'clink' then
       if not is_momod(msg) then
         return "For moderators only!"
       end
@@ -729,16 +729,16 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] revoked group link ")
       return export_chat_link(receiver, callback, true)
     end
-    if matches[1] == 'link' then
+    if matches[1] == 'glink' then
       if not is_momod(msg) then
         return "For moderators only!"
       end
       local group_link = data[tostring(msg.to.id)]['settings']['set_link']
       if not group_link then 
-        return "Create a link using /newlink first !"
+        return "Create a link using /clink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-      return "Group link:\n"..group_link
+      return "The Invite Link for this group is :\n"..group_link
     end
     if matches[1] == 'setowner' then
       if not is_owner(msg) then
@@ -838,8 +838,8 @@ local function run(msg, matches)
 end
 return {
   patterns = {
-  "^[!/](add)$",
-  "^[!/](rem)$",
+  "^[!/](addgp)$",
+  "^[!/](remgp)$",
   "^[!/](rules)$",
   "^[!/](about)$",
   "^[!/](setname) (.*)$",
@@ -858,8 +858,8 @@ return {
   "^[!/](setflood) (%d+)$",
   "^[!/](settings)$",
   "^[!/](modlist)$",
-  "^[!/](newlink)$",
-  "^[!/](link)$",
+  "^[!/](clink)$",
+  "^[!/](glink)$",
   "%[(photo)%]",
   "^!!tgservice (.+)$",
   },
