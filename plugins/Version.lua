@@ -13,8 +13,8 @@ for 3 month 😱
 admins :
 @creed_is_dead 
 @Mustafaflux
-for global admin : 40 tommans for 2 month🙈
-or 20tomans each month😝
+for global admin : 20 tommans for 2 month🙈
+or 10 tomans each month😝
 The Will open source soon
 Enigneer ᗩᖇᗩᔕᕼ.Iᑎᖴᕮᖇᑎᗩᒪ .]] 
 end
