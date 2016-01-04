@@ -239,7 +239,7 @@ function create_config( )
   @Mr_SilVeR1
 ]],
     help_text = [[
-Infernals Help TxT : 😈
+SilVeR-BoT Help TxT : 😈
 Plugins : 🔻
 
 1. banhammer ⭕️
