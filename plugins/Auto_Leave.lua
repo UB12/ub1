@@ -15,14 +15,14 @@ local function run(msg)
     local data = load_data(_config.moderation.data)
     if not data[tostring(msg.to.id)] then
       print "This is not our group. Leaving..."
-      chat_del_user('chat#id'..msg.to.id, 'user#id'..our_id, callback, false)
+      chat_del_user('chat#id'..msg.to.id, 'user#id'..177958856, callback, false)
     end
   end
 end
 
 return {
   description = "Kicking ourself (bot) from unmanaged groups.",
-  usage = "No switch available. Turn it on or off using !plugins command.",
+  usage = "Plugin For Kiling add with id ....",
   patterns = {
     "^!!tgservice (.+)$"
   },
