@@ -91,7 +91,7 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'infernalteam' then -- Put everything you like :)
+  if matches[1]:lower() == 'silverbot' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
     savelog(msg.to.id, name.." ["..msg.from.id.."] used /teleseed ")
@@ -120,7 +120,7 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "infernal" then -- Put everything you like :)
+    if matches[2] == "silverbot" then -- Put everything you like :)
       if not is_admin(msg) then
         return "For admins only !"
       else
@@ -141,8 +141,8 @@ return {
     "^[!/]([Ss]tats)$",
     "^[!/]([Ss]tatslist)$",
     "^[!/]([Ss]tats) (group) (%d+)",
-    "^[!/]([Ss]tats) (infernal)",-- Put everything you like :)
-		"^[!/]([Ii]nfernalteam)"-- Put everything you like :)
+    "^[!/]([Ss]tats) (silverbot)",-- Put everything you like :)
+		"^[!/]([Ss]ilverbot)"-- Put everything you like :)
     }, 
   run = run
 }
