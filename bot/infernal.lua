@@ -220,33 +220,23 @@ function create_config( )
     "lock_link",
     "all"
     },
-    sudo_users = {109722284,125130911},--Sudo users
+    sudo_users = {121122782},--Sudo users
     disabled_channels = {},
-    realm = {84362162,74008375},--Realms Id
+    realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[infernal bot v1.3
- sudouser : @Arashinfernal
- The inter Security TEAM😱
-INFERNAL™
-〰〰〰〰〰〰〰〰〰〰〰〰
-Leader : @ArashINFERNAL
-moderator : @Shahabsaf 
-moderator : @creed_is_dead 
-moderator : @Mustafaflux 
-moderator : @Parham_mrbot 
-〰〰〰〰〰〰〰〰〰〰〰〰
-Member : @NXT_Sudo 
-Member : @Arash_admin_dragon 
-Member : @lord_hpr 
-Member : @ali_ghoghnoos
-Member : @Minaco
-Member : @DrRampy
-Member : @ThisIsArman
-Member : @digitalboys
-
-Our channels
-@INFERNALTEAM [persian]
-@INFERNALCHANNE: [persian]
+    about_text = [[SilVeR bot v1.3
+ sudouser : @Mr_SilVeR1
+ 
+  This Is Old BoT Of TeleGrAm
+  
+  This Bot Is a Best BoT
+  
+  This Bot Can FuCK All Spammer
+  
+  Shot The Fuck Up
+  
+  Create By:
+  @Mr_SilVeR1
 ]],
     help_text = [[
 Infernals Help TxT : 😈
@@ -339,11 +329,8 @@ set some one to global admin🔸
 remove somone from global admin🔹
 〰〰〰〰〰〰〰〰〰〰〰
 3. Stats :©
-!stats infernal (sudoers)✔️
+!stats silverbot (sudoers)✔️
 shows bt stats🔚
-
-!infernalteam☑️
-shows about our team🎶
 
 !stats🔘
 shows group stats💲
@@ -357,8 +344,8 @@ send maseage to admins via bot🔈
 will tag users©
 〰〰〰〰〰〰〰〰〰
 more plugins soon™
-Our team✔️iNFERNAL➰
-our channel : @INFERNALCHANNEL & @INFERNALTEAM🔋
+Our team✔SilVeR-BoTL➰
+our channel : @SilVeRChannel🔋
 You Can user both "!" & "/" for them🎧
 ]]
 
