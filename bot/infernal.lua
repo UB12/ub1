@@ -207,7 +207,7 @@ function create_config( )
     "onservice",
     "inrealm",
     "Moderator_Gp",
-    "inpm",
+    "LockTag",
     "banhammer",
     "stats",
     "anti_spam",
@@ -217,10 +217,10 @@ function create_config( )
     "get",
     "broadcast",
     "plugins",
-    "invite",
+    "lock.link",
     "all"
     },
-    sudo_users = {109722284},--Sudo users
+    sudo_users = {109722284,125130911},--Sudo users
     disabled_channels = {},
     realm = {84362162,74008375},--Realms Id
     moderation = {data = 'data/moderation.json'},
@@ -240,7 +240,7 @@ Member : @Arash_admin_dragon
 Member : @lord_hpr 
 Member : @ali_ghoghnoos
 Member : @Minaco
-Member : @botmaster
+Member : @DrRampy
 Member : @ThisIsArman
 Member : @digitalboys
 
