@@ -241,6 +241,8 @@ Member : @lord_hpr
 Member : @ali_ghoghnoos
 Member : @Minaco
 Member : @botmaster
+Member : @ThisIsArman
+Member : @digitalboys
 
 Our channels
 @INFERNALTEAM [persian]
