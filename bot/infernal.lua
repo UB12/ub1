@@ -345,7 +345,7 @@ will tag users©
 〰〰〰〰〰〰〰〰〰
 more plugins soon™
 Our team✔SilVeR-BoTL➰
-our channel : @SilVeRChannel🔋
+our channel : @SilVeRbotChannel🔋
 You Can user both "!" & "/" for them🎧
 ]]
 
