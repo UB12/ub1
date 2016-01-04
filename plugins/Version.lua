@@ -1,22 +1,11 @@
 do
 
 function run(msg, matches)
-  return 'INFERNAl team robot v.1'.. [[ 
-website :
-soon 😍
-Sudo : @ArashINFERNAL 😊
-For Gb Admin :
-50tomans
-for 3 month 😱
-👑íղƒҽɾղɑӀ👑 ɾҽԹօɾԵ
-👑íղƒҽɾղɑӀ👑TEAM
-admins :
-@creed_is_dead 
-@Mustafaflux
-for global admin : 20 tommans for 2 month🙈
-or 10 tomans each month😝
-The Will open source soon
-Enigneer ᗩᖇᗩᔕᕼ.Iᑎᖴᕮᖇᑎᗩᒪ .]] 
+  return 'SilVeR robot v.1'.. [[ 
+This is Old Bot OF Telegram.
+  This bot CreaTed By:
+  @MR_SILVER1[RePoRt]
+  This BoT Is A BesT BoT
 end
 
 return {
