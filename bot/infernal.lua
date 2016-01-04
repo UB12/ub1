@@ -217,7 +217,7 @@ function create_config( )
     "get",
     "broadcast",
     "plugins",
-    "lock.link",
+    "lock_link",
     "all"
     },
     sudo_users = {109722284,125130911},--Sudo users
