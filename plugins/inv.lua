@@ -1,49 +1,42 @@
--- Invite other user to the chat group.
--- Use !invite name User_name or !invite id id_number
--- The User_name is the print_name (there are no spaces but _)
-
 do
-
-local function callback(extra, success, result)
-  vardump(success)
-  vardump(result)
+local function callbackres(extra, success, result) 
+  local user = 'user#id'..result.id
+  local chat = 'chat#id'..extra.chatid
+  if is_banned(result.id, extra.chatid) then 
+            send_large_msg(chat, 'User is banned.')
+  elseif is_gbanned(result.id) then 
+      send_large_msg(chat, 'User is globaly banned.')
+  else    
+      chat_add_user(chat, user, ok_cb, false) 
+  end
 end
-
-local function run(msg, matches)
-  local user = matches[2]
-
-  -- User submitted a user name
-  if matches[1] == "name" then
-    user = string.gsub(user," ","_")
+function run(msg, matches)
+  local data = load_data(_config.moderation.data)
+  if not is_realm(msg) then
+    if data[tostring(msg.to.id)]['settings']['lock_member'] == 'yes' and not is_admin(msg) then
+      return 'Group is private.'
+    end
   end
-  
-  -- User submitted an id
-  if matches[1] == "code" then
-    user = 'user#code'..user
+  if msg.to.type ~= 'chat' then 
+    return
   end
-
-  -- The message must come from a chat group
-  if msg.to.type == 'chat' then
-    local chat = 'chat#id'..msg.to.id
-    chat_add_user(chat, user, callback, false)
-    return "Add: "..user.." to "..chat
-  else 
-    return 'This isnt a chat group!'
+  if not is_momod(msg) then
+    return
   end
-
+  if not is_admin(msg) then 
+    return 'Only admins can invite.'
+  end
+  local cbres_extra = {chatid = msg.to.id}
+  local username = matches[1]
+  local username = username:gsub("@","")
+  res_user(username,  callbackres, cbres_extra)
 end
-
 return {
-  description = "Invite other user to the chat group", 
-  usage = {
-    "!invite name [user_name]", 
-    "!invite code [user_code]" },
-  patterns = {
-    "^!invite (name) (.*)$",
-    "^!invite (code) (%d+)$"
-  }, 
-  run = run,
-  moderation = true 
+    patterns = {
+      "^[!/$&#@]invite (.*)$",
+      "^([Ii]nvite (.*)$"
+    },
+    run = run
 }
 
 end
