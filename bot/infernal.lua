@@ -222,7 +222,7 @@ function create_config( )
     },
     sudo_users = {121122782,118361414},--Sudo users
     disabled_channels = {},
-    realm = {},--Realms Id
+    realm = {86689226},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[SilVeR bot v1.3
  sudouser : @Mr_SilVeR1
