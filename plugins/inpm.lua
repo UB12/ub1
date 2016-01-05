@@ -21,6 +21,7 @@ end
 return {
     patterns = {
       "^[/!](join) (.*)$"
+      "^[Jj](oin) (.*)$"
     },
     run = run,
 }
