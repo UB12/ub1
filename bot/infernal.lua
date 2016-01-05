@@ -220,26 +220,28 @@ function create_config( )
     "lock_link",
     "all"
     },
-    sudo_users = {121122782,118361414},--Sudo users
+    sudo_users = {163437093,118682430,67018895},--Sudo users
     disabled_channels = {},
-    realm = {86689226},--Realms Id
+    realm = {48687411},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[SilVeR bot v1.3
- sudouser : @Mr_SilVeR1
- 
-  This Is Old BoT Of TeleGrAm
-  
-  This Bot Is a Best BoT
-  
-  This Bot Can FuCK All Spammer
-  
-  Shot The Fuck Up
-  
-  Create By:
-  @Mr_SilVeR1
+    about_text = [[Creed bot 2.0
+    
+     Hello my Good friends 😀🖐🏻
+     
+    ‼️ this bot is made by : @creed_is_dead
+   〰〰〰〰〰〰〰〰
+   🚩 Our admins are : 
+   🔰 @sorblack_creed
+   🔰 @amircc_creed
+   🔰 @aria_creed
+   🔰 @alireza_mah_creed 
+   〰〰〰〰〰〰〰〰
+  ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
+   
+   !feedback (your ideas and messages)
 ]],
     help_text = [[
-SilVeR-BoT Help TxT : 😈
+Creed bots Help for mods : 😈
 Plugins : 🔻
 
 1. banhammer ⭕️
@@ -329,7 +331,7 @@ set some one to global admin🔸
 remove somone from global admin🔹
 〰〰〰〰〰〰〰〰〰〰〰
 3. Stats :©
-!stats silverbot (sudoers)✔️
+!stats creedbot (sudoers)✔️
 shows bt stats🔚
 
 !stats🔘
@@ -343,9 +345,9 @@ send maseage to admins via bot🔈
 !tagall txt🔸
 will tag users©
 〰〰〰〰〰〰〰〰〰
-more plugins soon™
-Our team✔SilVeR-BoTL➰
-our channel : @SilVeRbotChannel🔋
+🔜 more plugins 
+⚠️ We are Creeds ... ⚠️
+our channel : @creedantispam_channel🔋
 You Can user both "!" & "/" for them🎧
 ]]
 
