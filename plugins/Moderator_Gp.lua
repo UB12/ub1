@@ -712,7 +712,7 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group settings ")
       return show_group_settingsmod(msg, data, target)
     end
-    if matches[1] == 'clink' then
+    if matches[1] == 'newlink' then
       if not is_momod(msg) then
         return "For moderators only!"
       end
@@ -729,13 +729,13 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] revoked group link ")
       return export_chat_link(receiver, callback, true)
     end
-    if matches[1] == 'glink' then
+    if matches[1] == 'getlink' then
       if not is_momod(msg) then
         return "For moderators only!"
       end
       local group_link = data[tostring(msg.to.id)]['settings']['set_link']
       if not group_link then 
-        return "Create a link using /clink first !"
+        return "Create a link using /newlink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
       return "The Invite Link for this group is :\n"..group_link
@@ -858,8 +858,8 @@ return {
   "^[!/](setflood) (%d+)$",
   "^[!/](settings)$",
   "^[!/](modlist)$",
-  "^[!/](clink)$",
-  "^[!/](glink)$",
+  "^[!/](newlink)$",
+  "^[!/](getlink)$",
   "%[(photo)%]",
   "^!!tgservice (.+)$",
   },
