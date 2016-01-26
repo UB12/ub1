@@ -15,6 +15,7 @@ local function check_member(cb_extra, success, result)
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           lock_name = 'yes',
           lock_photo = 'no',
+          lock_leave = 'no',
           lock_member = 'no',
           flood = 'yes',
           antilink = "yes",
@@ -52,6 +53,7 @@ local function check_member_modadd(cb_extra, success, result)
           lock_photo = 'no',
           lock_member = 'no',
           lock_join = 'no',
+          lock_leave = 'no',
           flood = 'yes'
           antilink = "yes",
           antitag = "no"
@@ -117,7 +119,7 @@ local function show_group_settingsmod(msg, data, target)
     	bots_protection = data[tostring(msg.to.id)]['settings']['lock_bots']
    	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group Tag : "..settings.antitag.."\nLock group link : "..settings.antilink.."\nLock group join : "..settings.lock_join.."\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection
+  local text = "Group settings:\nLock group Leave : "..settings.lock_leave.."\nLock group Tag : "..settings.antitag.."\nLock group link : "..settings.antilink.."\nLock group join : "..settings.lock_join.."\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection
   return text
 end
 
@@ -244,7 +246,31 @@ save_data(_config.moderation.data, data)
 return 'Link has been unlocked'
 end
 end
-local group_english_lock = data[tostring(target)]['settings']['aenglish']
+  local group_leave_lock = data[tostring(target)]['settings']['lock_leave']
+  if group_leave_lock == 'yes' then
+    return 'Ban leaver is already locked'
+  else
+    data[tostring(target)]['settings']['lock_leave'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'Ban leaver has been locked'
+  end
+end
+
+local function unlock_group_leave(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_leave_lock = data[tostring(target)]['settings']['lock_leave']
+  if group_leave_lock == 'no' then
+    return 'Ban leaver is already unlocked'
+  else
+    data[tostring(target)]['settings']['lock_leave'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'Ban leaver has been unlocked'
+  end
+end
+
+local group_english_lock = data[tostring(target)]['settings']['english']
 if group_english_lock == 'yes' then
 return 'english is already locked'
 else
@@ -776,6 +802,10 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked flood ")
         return lock_group_floodmod(msg, data, target)
       end
+      if matches[2] == 'leave' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked ban leaver ")
+        return lock_group_leave(msg, data, target)
+      end
       if matches[2] == 'link' then
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked link ")
        return lock_group_link(msg, data, target)
@@ -810,6 +840,10 @@ local function run(msg, matches)
       if matches[2] == 'photo' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked photo ")
         return unlock_group_photomod(msg, data, target)
+      end
+      if matches[2] == 'leave' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked ban leaver ")
+        return unlock_group_leave(msg, data, target)
       end
       if matches[2] == 'flood' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked flood ")
