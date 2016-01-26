@@ -267,15 +267,6 @@ you Can do it By Replay 👤
 !Creategroup "GroupName" 🙈
 You Can CreateGroup With this command😱
 
-!lock member 😋
-You Can lock Your Group Members 🔻
-
-!lock bots 🔹
-No bots can come in Your gp 🕶
-
-!lock name ❤️
-no one can change your gpname💍
-
 !setflood😃
 Set the group flood control🈹
 
@@ -291,10 +282,10 @@ You can set someone to the group owner‼️
 !modlist💯
 watch Group mods🔆
 
-!lock flood⚠️
-lock group flood🔰
+!lock (bots-member-flood-photo-name-Arabic-english-tag-join-link)✅
+lock Something🚼
 
-!unlock (bots-member-flood-photo-name-Arabic)✅
+!unlock (bots-member-flood-photo-name-Arabic-english-tag-join-link)✅
 Unlock Something🚼
 
 !rules 🆙 or !set rules🆗
