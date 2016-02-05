@@ -220,9 +220,9 @@ function create_config( )
     "lock_link",
     "all"
     },
-    sudo_users = {144658773,112707993,94746365},--Sudo users
+    sudo_users = {114934518,104878785},--Sudo users
     disabled_channels = {},
-    realm = {48687411,41151446},--Realms Id
+    realm = {114934518,104878785},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[Creed bot 2.0
     
@@ -231,10 +231,10 @@ function create_config( )
     ‼️ this bot is made by : @creed_is_dead
    〰〰〰〰〰〰〰〰
    🚩 Our admins are : 
-   🔰 @yellow_hqt
-   🔰 @yellowhat
-   🔰 @yellow_hat
-   🔰 @yellowhat
+   🔰 @sina7sk
+   🔰 @blackdifens
+   🔰 @sina7skk
+   🔰 @sina7skkk
    〰〰〰〰〰〰〰〰
   ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
    
