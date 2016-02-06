@@ -231,10 +231,7 @@ function create_config( )
     ‼️ this bot is made by : @creed_is_dead
    〰〰〰〰〰〰〰〰
    🚩 Our admins are : 
-   🔰 @sina7sk
-   🔰 @blackdifens
-   🔰 @sina7skk
-   🔰 @sina7skkk
+   
    〰〰〰〰〰〰〰〰
   ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
    
